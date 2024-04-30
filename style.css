@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+    flex: 1 1 100%;
+    display: flex;
+    /* gap: 9rem; */
+    justify-content: space-between;
+    padding: 1rem;
+    padding-bottom: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cont-1 {
+    display: flex;
+    gap: 2rem;
+    /* border: 1px solid black; */
+    flex: 1 1 55%;
+}
+
+.cont-2 {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 1rem;
+    flex: 1 1 35%;
+}
+
+/* For the mobile view */
+.item-1-1 {
+    display: none;
+}
+
+.item-2-1,
+.item-3-1,
+.item-4-1,
+.item-5-1,
+.item-7 {
+    display: none;
+}
+
+.item-2 {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.input-width {
+    display: flex;
+    flex: 1 1 auto;
+
+    padding: 0.6rem;
+    border: none;
+    background-color: rgba(25, 108, 210, 0.292);
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+}
+
+.item-3 button {
+    display: flex;
+    flex: 1 1 auto;
+
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.item-3 button:hover {
+    background-color: rgb(35, 35, 224);
+    border-radius: 0.8rem;
+}
+
+.item-4 button {
+    display: flex;
+    flex: 1 1 auto;
+
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.item-5 button {
+    display: flex;
+    flex: 1 1 auto;
+
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.item-6 button {
+    display: flex;
+    flex: 1 1 auto;
+
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+/* For Login Hover */
+.item-3 {
+    position: relative;
+}
+.dropdown {
+    position: absolute;
+    display: none;
+    border: 1px solid black;
+    width: 200px;
+    max-height: 400px;
+    z-index: 1;
+}
+.dropdown a {
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    background-color: aquamarine;
+    padding: 0.5rem;
+}
+.dropdown-1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    padding: 0.5rem;
+}
+.item-3:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        width: 100%;
+        background-color: rgba(47, 106, 118, 0.959);
+        flex: 1 1 auto;
+    }
+    .cont-1 {
+        display: flex;
+        gap: 1rem;
+        /* border: 1px solid black; */
+        flex: 1 1 40%;
+        /* background-color: rgba(47, 106, 118, 0.959); */
+
+    }
+    .cont-2 {
+        /* border: 1px solid red; */
+        display: flex;
+        gap: 0.2rem;
+        flex: 1 1 60%;
+        /* background-color: rgba(47, 106, 118, 0.959); */
+    }
+    .item-1,
+    .item-2,
+    .item-3,
+    .item-4,
+    .item-5,
+    .item-6 {
+        display: none;
+    }
+
+    .item-1-1 {
+        display: inline;
+        margin-left: 5rem;
+        margin-top: 0.4rem;
+        flex: 0 1 auto;
+    }
+
+    .item-2-1 {
+        display: inline;
+        margin-right: 0.5rem;
+    }
+
+    .item-3-1,
+    .item-4-1,
+    .item-5-1 {
+        display: inline;
+        margin-top: 0.4rem;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .item-4-1 button {
+        display: flex;
+        flex: 1 1 auto;
+
+        gap: 0.4rem;
+        background: none;
+        border: none;
+        font-size: 1.4rem;
+    }
+
+    .item-7 {
+        display: flex;
+        margin: 0rem 1rem;
+    }
+    .input-width {
+        display: flex;
+        width: 100%;
+        padding: 0.6rem;
+        border: none;
+        background-color: rgba(25, 108, 210, 0.292);
+        font-size: 1.2rem;
+        border-radius: 0.4rem;
+    }
+
+/* For Login Hover for mobile view*/
+    .item-4-1 {
+        position: relative;
+    }
+    .dropdown {
+        position: absolute;
+        display: none;
+        border: 1px solid black;
+        width: 200px;
+        max-height: 400px;
+        z-index: 1;
+    }
+    .dropdown a {
+        border: 1px solid black;
+        text-decoration: none;
+        color: black;
+        background-color: aquamarine;
+        padding: 0.5rem;
+    }
+    .dropdown-1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: aquamarine;
+        padding: 0.5rem;
+    }
+    .item-4-1:hover .dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* How can i make images to be responsice  */
