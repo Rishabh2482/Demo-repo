@@ -3,244 +3,79 @@
     margin: 0px;
 }
 
-header {
-    width: 100%;
-    flex: 1 1 100%;
+/* Make it Mobile First */
+/* Write only Mobile properties. */
+
+.section-1,
+.section-2 {
+    display: none;
+}
+
+/* Nav-bar starts */
+.section-3 {
     display: flex;
-    /* gap: 9rem; */
     justify-content: space-between;
-    padding: 1rem;
-    padding-bottom: 0px;
-    background-color: rgb(255, 255, 255);
+    overflow: auto;     /* Important property. This property is needed whenever we apply display flex. (For small screen size.)*/ 
+    overflow-x: hidden;     /* Important property. */
 }
 
-.cont-1 {
+.right {
     display: flex;
-    gap: 2rem;
+    gap: 0.4rem;
+    justify-content: center;
+    flex-grow: 1;
     /* border: 1px solid black; */
-    flex: 1 1 55%;
+    align-items: center;
+
 }
 
-.cont-2 {
-    /* border: 1px solid red; */
+.left {
+    /* border: 1px solid black; */
     display: flex;
-    gap: 1rem;
-    flex: 1 1 35%;
+    justify-content: flex-end;
+    /* flex-basis: 40%; */
+    flex: 1;
 }
 
-/* For the mobile view */
-.item-1-1 {
-    display: none;
-}
-
-.item-2-1,
-.item-3-1,
-.item-4-1,
-.item-5-1,
-.item-7 {
-    display: none;
-}
-
-.item-2 {
+.login {
     display: flex;
-    flex: 1 1 auto;
+    flex-wrap: nowrap;
+}
+
+/* Nav-bar ends */
+
+/* Search-bar starts*/
+.section-4 {
+    border-radius: 1rem;
+    background-color: aliceblue;
+    padding: 0.4rem;
+}
+
+.search {
+    display: flex;
 }
 
 .input-width {
-    display: flex;
+    width: 100%;
     flex: 1 1 auto;
-
-    padding: 0.6rem;
     border: none;
-    background-color: rgba(25, 108, 210, 0.292);
-    font-size: 1.2rem;
-    border-radius: 0.4rem;
+    background-color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* border: 1px solid black; */
+}
+/* Search-bar ends */
+
+
+@media only screen and (max-width:1190px) and (min-width:780px) {
+
 }
 
-.item-3 button {
-    display: flex;
-    flex: 1 1 auto;
-
-    gap: 0.4rem;
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    padding: 0.5rem;
-}
-
-.item-3 button:hover {
-    background-color: rgb(35, 35, 224);
-    border-radius: 0.8rem;
-}
-
-.item-4 button {
-    display: flex;
-    flex: 1 1 auto;
-
-    gap: 0.4rem;
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    padding: 0.5rem;
-}
-
-.item-5 button {
-    display: flex;
-    flex: 1 1 auto;
-
-    gap: 0.4rem;
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    padding: 0.5rem;
-}
-
-.item-6 button {
-    display: flex;
-    flex: 1 1 auto;
-
-    gap: 0.4rem;
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    padding: 0.5rem;
-}
-
-/* For Login Hover */
-.item-3 {
-    position: relative;
-}
-.dropdown {
-    position: absolute;
-    display: none;
-    border: 1px solid black;
-    width: 200px;
-    max-height: 400px;
-    z-index: 1;
-}
-.dropdown a {
-    border: 1px solid black;
-    text-decoration: none;
-    color: black;
-    background-color: aquamarine;
-    padding: 0.5rem;
-}
-.dropdown-1 {
-    display: flex;
-    justify-content: space-between;
-    background-color: aquamarine;
-    padding: 0.5rem;
-}
-.item-3:hover .dropdown {
-    display: flex;
-    flex-direction: column;
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        display: flex;
-        width: 100%;
-        background-color: rgba(47, 106, 118, 0.959);
-        flex: 1 1 auto;
-    }
-    .cont-1 {
-        display: flex;
-        gap: 1rem;
-        /* border: 1px solid black; */
-        flex: 1 1 40%;
-        /* background-color: rgba(47, 106, 118, 0.959); */
-
-    }
-    .cont-2 {
-        /* border: 1px solid red; */
-        display: flex;
-        gap: 0.2rem;
-        flex: 1 1 60%;
-        /* background-color: rgba(47, 106, 118, 0.959); */
-    }
-    .item-1,
-    .item-2,
-    .item-3,
-    .item-4,
-    .item-5,
-    .item-6 {
+@media only screen and (min-width:1190px) {
+    /* Write css for this mobile css is done */
+    .section-3,.section-4
+    {
         display: none;
     }
-
-    .item-1-1 {
-        display: inline;
-        margin-left: 5rem;
-        margin-top: 0.4rem;
-        flex: 0 1 auto;
-    }
-
-    .item-2-1 {
-        display: inline;
-        margin-right: 0.5rem;
-    }
-
-    .item-3-1,
-    .item-4-1,
-    .item-5-1 {
-        display: inline;
-        margin-top: 0.4rem;
-        margin-left: auto;
-        cursor: pointer;
-    }
-
-    .item-4-1 button {
-        display: flex;
-        flex: 1 1 auto;
-
-        gap: 0.4rem;
-        background: none;
-        border: none;
-        font-size: 1.4rem;
-    }
-
-    .item-7 {
-        display: flex;
-        margin: 0rem 1rem;
-    }
-    .input-width {
-        display: flex;
-        width: 100%;
-        padding: 0.6rem;
-        border: none;
-        background-color: rgba(25, 108, 210, 0.292);
-        font-size: 1.2rem;
-        border-radius: 0.4rem;
-    }
-
-/* For Login Hover for mobile view*/
-    .item-4-1 {
-        position: relative;
-    }
-    .dropdown {
-        position: absolute;
-        display: none;
-        border: 1px solid black;
-        width: 200px;
-        max-height: 400px;
-        z-index: 1;
-    }
-    .dropdown a {
-        border: 1px solid black;
-        text-decoration: none;
-        color: black;
-        background-color: aquamarine;
-        padding: 0.5rem;
-    }
-    .dropdown-1 {
-        display: flex;
-        justify-content: space-between;
-        background-color: aquamarine;
-        padding: 0.5rem;
-    }
-    .item-4-1:hover .dropdown {
-        display: flex;
-        flex-direction: column;
-    }
 }
-
-/* How can i make images to be responsice  */
