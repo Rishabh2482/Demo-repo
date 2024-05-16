@@ -6,6 +6,7 @@
 /* Make it Mobile First */
 /* Write only Mobile properties. */
 
+
 .section-1,
 .section-2 {
     display: none;
@@ -15,8 +16,12 @@
 .section-3 {
     display: flex;
     justify-content: space-between;
-    overflow: auto;     /* Important property. This property is needed whenever we apply display flex. (For small screen size.)*/ 
-    overflow-x: hidden;     /* Important property. */
+    overflow: auto;
+    /* Important property. This property is needed whenever we apply display flex. (For small screen size.)*/
+    overflow-x: hidden;
+    /* Important property. */
+    font-size: large;
+    gap: 1rem;
 }
 
 .right {
@@ -46,13 +51,15 @@
 
 /* Search-bar starts*/
 .section-4 {
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     background-color: aliceblue;
     padding: 0.4rem;
+    
 }
 
 .search {
     display: flex;
+    
 }
 
 .input-width {
@@ -65,17 +72,153 @@
     white-space: nowrap;
     /* border: 1px solid black; */
 }
+
+
 /* Search-bar ends */
 
 
 @media only screen and (max-width:1190px) and (min-width:780px) {
 
-}
+    .section-3,
+    .section-4 {
+        display: none;
+    }
 
-@media only screen and (min-width:1190px) {
-    /* Write css for this mobile css is done */
-    .section-3,.section-4
+    .container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .section-1 {
+        display: flex;
+        gap: 1rem;
+        flex: 1 1 auto;
+        
+    }
+
+    .l-search {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        /* flex-basis: 100%; */
+        padding: 0.4rem;
+        background-color: aliceblue;
+    }
+
+    .img {
+        display: flex;
+    }
+
+    .l-input {
+        /* display: flex;       Why does it not take the full width ( with display: flex) even after applyting flex-grow as 1*/
+        flex: 1 1 auto;
+        /* width: 100px; */
+    }
+
+    .l-input-width {
+        width: 100%;
+        border: none;
+        flex: 1 1 auto;
+        background-color: transparent;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0.2rem;
+    }
+    .l-input-width::placeholder
+    {
+        font-size: large;
+
+    }
+    .section-2 {
+        display: flex;
+        align-items: center;
+        flex: 1 1 10%;
+        justify-content: space-around;
+        font-size: large;
+    }
+
+    .cart,
+    .extra,
+    .seller {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .title
     {
         display: none;
     }
+    
+}
+
+@media only screen and (min-width:1190px) {
+
+
+    .section-3,
+    .section-4 {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .section-1 {
+        display: flex;
+        gap: 1rem;
+        flex: 1 1 auto;
+        
+    }
+
+    .l-search {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        /* flex-basis: 100%; */
+        padding: 0.4rem;
+        background-color: aliceblue;
+    }
+
+    .img {
+        display: flex;
+    }
+
+    .l-input {
+        /* display: flex;       Why does it not take the full width ( with display: flex) even after applyting flex-grow as 1*/
+        flex: 1 1 auto;
+        /* width: 100px; */
+    }
+
+    .l-input-width {
+        width: 100%;
+        border: none;
+        flex: 1 1 auto;
+        background-color: transparent;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0.2rem;
+    }
+    .l-input-width::placeholder
+    {
+        font-size: large;
+
+    }
+    .section-2 {
+        display: flex;
+        align-items: center;
+        /* gap: 2rem; */
+        flex: 1 1 10%;
+        justify-content: space-evenly;
+        font-size: large;
+    }
+
+    .cart,
+    .extra,
+    .seller {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
 }
